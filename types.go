@@ -219,6 +219,15 @@ type ContainerInfo struct {
 	ResolvConfPath string
 	Volumes        map[string]string
 	HostConfig     *HostConfig
+	Node           struct {
+		ID     string
+		IP     string
+		Addr   string
+		Name   string
+		Cpus   int64
+		Memory int64
+		Labels map[string]string
+	}
 }
 
 type ContainerChanges struct {
